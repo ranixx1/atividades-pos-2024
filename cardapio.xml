@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cardapio SYSTEM "definicoes.dtd">
+<cardapio>
+    <prato id="p1">
+        <nome>Bobó de Camarão</nome>
+        <descricao>Prato tradicional da culinária brasileira com camarões, aipim e leite de coco.</descricao>
+        <ingredientes>
+            <ingrediente>Camarão</ingrediente>
+            <ingrediente>Aipim (mandioca)</ingrediente>
+            <ingrediente>Leite de coco</ingrediente>
+            <ingrediente>Dendê</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 65.00</preco>
+        <calorias>750</calorias>
+        <tempoPreparo>75</tempoPreparo>
+    </prato>
+    <prato id="p2">
+        <nome>Escondidinho de Carne Seca</nome>
+        <descricao>Camadas de purê de mandioca com carne seca desfiada e queijo coalho gratinado.</descricao>
+        <ingredientes>
+            <ingrediente>Carne seca</ingrediente>
+            <ingrediente>Mandioca</ingrediente>
+            <ingrediente>Queijo coalho</ingrediente>
+            <ingrediente>Requeijão</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 55.00</preco>
+        <calorias>700</calorias>
+        <tempoPreparo>60</tempoPreparo>
+    </prato>
+    <prato id="p3">
+        <nome>Feijão Tropeiro</nome>
+        <descricao>Feijão refogado com farinha de mandioca, linguiça, bacon, ovos e temperos.</descricao>
+        <ingredientes>
+            <ingrediente>Feijão</ingrediente>
+            <ingrediente>Farinha de mandioca</ingrediente>
+            <ingrediente>Linguiça</ingrediente>
+            <ingrediente>Bacon</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 40.00</preco>
+        <calorias>600</calorias>
+        <tempoPreparo>45</tempoPreparo>
+    </prato>
+    <prato id="p4">
+        <nome>Risoto de Funghi</nome>
+        <descricao>Risoto cremoso com cogumelos funghi, parmesão e um toque de vinho branco.</descricao>
+        <ingredientes>
+            <ingrediente>Arroz arbóreo</ingrediente>
+            <ingrediente>Cogumelos funghi</ingrediente>
+            <ingrediente>Vinho branco</ingrediente>
+            <ingrediente>Queijo parmesão</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 70.00</preco>
+        <calorias>800</calorias>
+        <tempoPreparo>50</tempoPreparo>
+    </prato>
+    <prato id="p5">
+        <nome>Torta de Frango</nome>
+        <descricao>Massa crocante recheada com frango desfiado e temperado.</descricao>
+        <ingredientes>
+            <ingrediente>Frango</ingrediente>
+            <ingrediente>Massa de torta</ingrediente>
+            <ingrediente>Creme de leite</ingrediente>
+            <ingrediente>Ervilha</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 35.00</preco>
+        <calorias>550</calorias>
+        <tempoPreparo>40</tempoPreparo>
+    </prato>
+</cardapio>
