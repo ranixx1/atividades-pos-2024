@@ -1,0 +1,124 @@
+<!DOCTYPE imobiliaria [
+  <!ELEMENT imobiliaria (imovel+)>
+  <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+  <!ELEMENT descricao (#PCDATA)>
+  <!ELEMENT proprietario (nome, (email|telefone)+)>
+  <!ELEMENT nome (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT telefone (#PCDATA)>
+  <!ELEMENT endereco (rua, bairro, cidade, numero?)>
+  <!ELEMENT rua (#PCDATA)>
+  <!ELEMENT bairro (#PCDATA)>
+  <!ELEMENT cidade (#PCDATA)>
+  <!ELEMENT numero (#PCDATA)>
+  <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+  <!ELEMENT tamanho (#PCDATA)>
+  <!ELEMENT numQuartos (#PCDATA)>
+  <!ELEMENT numBanheiros (#PCDATA)>
+  <!ELEMENT valor (#PCDATA)>
+]>
+
+<imobiliaria>
+  <imovel>
+    <descricao>Casa ampla com piscina</descricao>
+    <proprietario>
+      <nome>Fulano de Tal</nome>
+      <email>fulano@example.com</email>
+      <telefone>(11) 98765-4321</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Rua das Flores</rua>
+      <bairro>Jardim Primavera</bairro>
+      <cidade>São Paulo</cidade>
+      <numero>100</numero>
+    </endereco>
+    <caracteristicas>
+      <tamanho>300 m²</tamanho>
+      <numQuartos>4</numQuartos>
+      <numBanheiros>3</numBanheiros>
+    </caracteristicas>
+    <valor>1000000</valor>
+  </imovel>
+  
+  <imovel >
+    <descricao>Apartamento moderno no centro</descricao>
+    <proprietario>
+      <nome>Ciclano da Silva</nome>
+      <telefone>(21) 98765-4321</telefone>
+      <telefone>(21) 87654-3210</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Rua Principal</rua>
+      <bairro>Centro</bairro>
+      <cidade>Rio de Janeiro</cidade>
+      <numero>405</numero>
+    </endereco>
+    <caracteristicas>
+      <tamanho>100 m²</tamanho>
+      <numQuartos>2</numQuartos>
+      <numBanheiros>2</numBanheiros>
+    </caracteristicas>
+    <valor>500000</valor>
+  </imovel>
+  
+  <imovel >
+    <descricao>Sítio com área verde</descricao>
+    <proprietario>
+      <nome>Beltrano Pereira</nome>
+      <email>beltrano@example.com</email>
+      <telefone>(31) 99876-5432</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Estrada do Sítio</rua>
+      <bairro>Zona Rural</bairro>
+      <cidade>Interior</cidade>
+    </endereco>
+    <caracteristicas>
+      <tamanho>1000 m²</tamanho>
+      <numQuartos>5</numQuartos>
+      <numBanheiros>4</numBanheiros>
+    </caracteristicas>
+    <valor>1500000</valor>
+  </imovel>
+  
+  <imovel>
+    <descricao>Sala comercial bem localizada</descricao>
+    <proprietario>
+      <nome>Maria da Silva</nome>
+      <email>maria@example.com</email>
+      <telefone>(51) 98765-4321</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Avenida Central</rua>
+      <bairro>Centro</bairro>
+      <cidade>Porto Alegre</cidade>
+      <numero>501</numero>
+    </endereco>
+    <caracteristicas>
+      <tamanho>80 m²</tamanho>
+      <numQuartos>0</numQuartos>
+      <numBanheiros>1</numBanheiros>
+    </caracteristicas>
+    <valor>300000</valor>
+  </imovel>
+  
+  <imovel>
+    <descricao>Chácara com piscina e área de lazer</descricao>
+    <proprietario>
+      <nome>José Oliveira</nome>
+      <telefone>(62) 98765-4321</telefone>
+    </proprietario>
+    <endereco>
+      <rua>Alameda dos Ipês</rua>
+      <bairro>Jardim das Flores</bairro>
+      <cidade>Goiânia</cidade>
+      <!-- Número não especificado -->
+    </endereco>
+    <caracteristicas>
+      <tamanho>500 m²</tamanho>
+      <numQuartos>3</numQuartos>
+      <numBanheiros>2</numBanheiros>
+    </caracteristicas>
+    <valor>800000</valor>
+  </imovel>
+</imobiliaria>
