@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quiz [
+<!ELEMENT quiz (disciplina, professor, turma, data, questões)>
+<!ATTLIST quiz
+    versao CDATA #REQUIRED>
+
+<!ELEMENT disciplina (#PCDATA)>
+<!ELEMENT professor (nome, matrícula?)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT matrícula (#PCDATA)>
+
+<!ELEMENT turma (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT questões (questão+)>
+
+<!ELEMENT questão (enunciado, pontuação, alternativas)>
+    <!ELEMENT enunciado (#PCDATA)>
+    <!ELEMENT pontuação (#PCDATA)>
+    <!ELEMENT alternativas (alternativa+)>
+
+<!ELEMENT alternativa (#PCDATA)>
+    <!ATTLIST alternativa
+        correta (sim|nao) #REQUIRED>
+]>
+<quiz versao="1.0">
+  <disciplina>Biologia</disciplina>
+  <professor>
+    <nome>Prof. Maria Oliveira</nome>
+    <matrícula>54321</matrícula>
+  </professor>
+  <turma>Turma C</turma>
+  <data>2024-07-19</data>
+  <questões>
+    <questão>
+      <enunciado>O que é mitose?</enunciado>
+      <pontuação>5 pontos</pontuação>
+      <alternativas>
+        <alternativa correta="sim">Processo de divisão celular que resulta em células filhas com o mesmo número de cromossomos que a célula mãe.</alternativa>
+        <alternativa correta="nao">Processo de divisão celular que resulta em células filhas com metade do número de cromossomos da célula mãe.</alternativa>
+        <alternativa correta="nao">Processo de digestão celular de nutrientes.</alternativa>
+        <alternativa correta="nao">Processo de troca de material genético entre células.</alternativa>
+      </alternativas>
+    </questão>
+    <questão>
+      <enunciado>Qual é o principal órgão responsável pela digestão no corpo humano?</enunciado>
+      <pontuação>4 pontos</pontuação>
+      <alternativas>
+        <alternativa correta="sim">Estômago</alternativa>
+        <alternativa correta="nao">Fígado</alternativa>
+        <alternativa correta="nao">Intestino delgado</alternativa>
+        <alternativa correta="nao">Pâncreas</alternativa>
+      </alternativas>
+    </questão>
+    <questão>
+      <enunciado>O que são os seres autótrofos?</enunciado>
+      <pontuação>3 pontos</pontuação>
+      <alternativas>
+        <alternativa correta="sim">Organismos que produzem seu próprio alimento através da fotossíntese ou quimiossíntese.</alternativa>
+        <alternativa correta="nao">Organismos que se alimentam de outros organismos.</alternativa>
+        <alternativa correta="nao">Organismos que se reproduzem assexuadamente.</alternativa>
+        <alternativa correta="nao">Organismos que vivem em ambientes extremos.</alternativa>
+      </alternativas>
+    </questão>
+    <questão>
+      <enunciado>Qual é o nome do processo de formação de gametas?</enunciado>
+      <pontuação>2 pontos</pontuação>
+      <alternativas>
+        <alternativa correta="sim">Gametogênese</alternativa>
+        <alternativa correta="nao">Meiose</alternativa>
+        <alternativa correta="nao">Mitose</alternativa>
+        <alternativa correta="nao">Fecundação</alternativa>
+      </alternativas>
+    </questão>
+    <questão>
+      <enunciado>O que é a clorofila?</enunciado>
+      <pontuação>3 pontos</pontuação>
+      <alternativas>
+        <alternativa correta="sim">É o pigmento responsável pela absorção da luz durante a fotossíntese.</alternativa>
+        <alternativa correta="nao">É uma enzima envolvida na respiração celular.</alternativa>
+        <alternativa correta="nao">É um tipo de célula encontrada em plantas e animais.</alternativa>
+        <alternativa correta="nao">É uma proteína presente no plasma sanguíneo.</alternativa>
+      </alternativas>
+    </questão>
+  </questões>
+</quiz>
