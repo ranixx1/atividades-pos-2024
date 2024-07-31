@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imobiliaria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="imobiliaria.xsd">
+    <imovel>
+        <descricao>Casa com piscina</descricao>
+        <proprietario>
+            <nome>João Silva</nome>
+            <email>joao.silva@example.com</email>
+            <telefone>123456789</telefone>
+            <telefone>987654321</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua A</rua>
+            <bairro>Centro</bairro>
+            <cidade>São Paulo</cidade>
+            <numero>100</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>120.5</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 500.000,00</valor>
+    </imovel>
+    <imovel>
+        <descricao>Apartamento moderno</descricao>
+        <proprietario>
+            <nome>Maria Souza</nome>
+            <telefone>234567890</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua B</rua>
+            <bairro>Jardins</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            <numero>200</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>85.0</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 350.000,00</valor>
+    </imovel>
+    <imovel>
+        <descricao>Casa na praia</descricao>
+        <proprietario>
+            <nome>Carlos Pereira</nome>
+            <email>carlos.pereira@example.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua C</rua>
+            <bairro>Praia Grande</bairro>
+            <cidade>Fortaleza</cidade>
+            <numero>50</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>200.0</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 800.000,00</valor>
+    </imovel>
+    <imovel>
+        <descricao>Apartamento compacto</descricao>
+        <proprietario>
+            <nome>Ana Costa</nome>
+            <telefone>345678901</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua D</rua>
+            <bairro>Centro</bairro>
+            <cidade>Curitiba</cidade>
+        </endereco>
+        <caracteristicas>
+            <tamanho>45.0</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 200.000,00</valor>
+    </imovel>
+    <imovel>
+        <descricao>Sítio com pomar</descricao>
+        <proprietario>
+            <nome>Luiz Almeida</nome>
+            <email>luiz.almeida@example.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Estrada E</rua>
+            <bairro>Zona Rural</bairro>
+            <cidade>Belo Horizonte</cidade>
+            <numero>300</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>500.0</tamanho>
+            <numQuartos>5</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 1.200.000,00</valor>
+    </imovel>
+</imobiliaria>
