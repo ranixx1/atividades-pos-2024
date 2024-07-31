@@ -1,0 +1,102 @@
+{
+    "imobiliaria": {
+      "imovel": [
+        {
+          "descricao": "Casa com piscina",
+          "proprietario": {
+            "nome": "João Silva",
+            "email": "joao.silva@example.com",
+            "telefone": ["123456789", "987654321"]
+          },
+          "endereco": {
+            "rua": "Rua A",
+            "bairro": "Centro",
+            "cidade": "São Paulo",
+            "numero": "100"
+          },
+          "caracteristicas": {
+            "tamanho": 120.5,
+            "numQuartos": 3,
+            "numBanheiros": 2
+          },
+          "valor": "R$ 500.000,00"
+        },
+        {
+          "descricao": "Apartamento moderno",
+          "proprietario": {
+            "nome": "Maria Souza",
+            "telefone": ["234567890"]
+          },
+          "endereco": {
+            "rua": "Rua B",
+            "bairro": "Jardins",
+            "cidade": "Rio de Janeiro",
+            "numero": "200"
+          },
+          "caracteristicas": {
+            "tamanho": 85.0,
+            "numQuartos": 2,
+            "numBanheiros": 1
+          },
+          "valor": "R$ 350.000,00"
+        },
+        {
+          "descricao": "Casa na praia",
+          "proprietario": {
+            "nome": "Carlos Pereira",
+            "email": "carlos.pereira@example.com"
+          },
+          "endereco": {
+            "rua": "Rua C",
+            "bairro": "Praia Grande",
+            "cidade": "Fortaleza",
+            "numero": "50"
+          },
+          "caracteristicas": {
+            "tamanho": 200.0,
+            "numQuartos": 4,
+            "numBanheiros": 3
+          },
+          "valor": "R$ 800.000,00"
+        },
+        {
+          "descricao": "Apartamento compacto",
+          "proprietario": {
+            "nome": "Ana Costa",
+            "telefone": ["345678901"]
+          },
+          "endereco": {
+            "rua": "Rua D",
+            "bairro": "Centro",
+            "cidade": "Curitiba"
+          },
+          "caracteristicas": {
+            "tamanho": 45.0,
+            "numQuartos": 1,
+            "numBanheiros": 1
+          },
+          "valor": "R$ 200.000,00"
+        },
+        {
+          "descricao": "Sítio com pomar",
+          "proprietario": {
+            "nome": "Luiz Almeida",
+            "email": "luiz.almeida@example.com"
+          },
+          "endereco": {
+            "rua": "Estrada E",
+            "bairro": "Zona Rural",
+            "cidade": "Belo Horizonte",
+            "numero": "300"
+          },
+          "caracteristicas": {
+            "tamanho": 500.0,
+            "numQuartos": 5,
+            "numBanheiros": 4
+          },
+          "valor": "R$ 1.200.000,00"
+        }
+      ]
+    }
+  }
+  

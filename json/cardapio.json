@@ -1,0 +1,47 @@
+{
+    "cardapio": {
+      "prato": [
+        {
+          "id": "1",
+          "nome": "Ravioli de Ricota e Espinafre",
+          "descricao": "Ravioli recheado com ricota e espinafre servido com molho de manteiga e sálvia.",
+          "ingredientes": {
+            "ingrediente": [
+              "Ravioli de ricota e espinafre",
+              "Manteiga",
+              "Sálvia",
+              "Queijo parmesão",
+              "Noz-moscada",
+              "Sal",
+              "Pimenta-do-reino"
+            ]
+          },
+          "preco": "28.00",
+          "calorias": "550",
+          "tempoPreparo": "25 minutos"
+        },
+        {
+          "id": "2",
+          "nome": "Wrap de Frango com Abacate",
+          "descricao": "Wrap recheado com frango grelhado, abacate, tomate e molho de iogurte.",
+          "ingredientes": {
+            "ingrediente": [
+              "Tortilla de trigo",
+              "Frango grelhado",
+              "Abacate",
+              "Tomate",
+              "Molho de iogurte",
+              "Folhas de alface",
+              "Limão",
+              "Sal",
+              "Pimenta-do-reino"
+            ]
+          },
+          "preco": "20.00",
+          "calorias": "400",
+          "tempoPreparo": "20 minutos"
+        }
+      ]
+    }
+  }
+  

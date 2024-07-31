@@ -1,0 +1,137 @@
+{
+    "quiz": {
+      "versao": "1.0",
+      "disciplina": "Biologia",
+      "professor": {
+        "nome": "Prof. Maria Oliveira",
+        "matrícula": "54321"
+      },
+      "turma": "Turma C",
+      "data": "2024-07-19",
+      "questões": {
+        "questão": [
+          {
+            "enunciado": "O que é mitose?",
+            "pontuação": "5 pontos",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "text": "Processo de divisão celular que resulta em células filhas com o mesmo número de cromossomos que a célula mãe."
+                },
+                {
+                  "correta": "nao",
+                  "text": "Processo de divisão celular que resulta em células filhas com metade do número de cromossomos da célula mãe."
+                },
+                {
+                  "correta": "nao",
+                  "text": "Processo de digestão celular de nutrientes."
+                },
+                {
+                  "correta": "nao",
+                  "text": "Processo de troca de material genético entre células."
+                }
+              ]
+            }
+          },
+          {
+            "enunciado": "Qual é o principal órgão responsável pela digestão no corpo humano?",
+            "pontuação": "4 pontos",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "text": "Estômago"
+                },
+                {
+                  "correta": "nao",
+                  "text": "Fígado"
+                },
+                {
+                  "correta": "nao",
+                  "text": "Intestino delgado"
+                },
+                {
+                  "correta": "nao",
+                  "text": "Pâncreas"
+                }
+              ]
+            }
+          },
+          {
+            "enunciado": "O que são os seres autótrofos?",
+            "pontuação": "3 pontos",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "text": "Organismos que produzem seu próprio alimento através da fotossíntese ou quimiossíntese."
+                },
+                {
+                  "correta": "nao",
+                  "text": "Organismos que se alimentam de outros organismos."
+                },
+                {
+                  "correta": "nao",
+                  "text": "Organismos que se reproduzem assexuadamente."
+                },
+                {
+                  "correta": "nao",
+                  "text": "Organismos que vivem em ambientes extremos."
+                }
+              ]
+            }
+          },
+          {
+            "enunciado": "Qual é o nome do processo de formação de gametas?",
+            "pontuação": "2 pontos",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "text": "Gametogênese"
+                },
+                {
+                  "correta": "nao",
+                  "text": "Meiose"
+                },
+                {
+                  "correta": "nao",
+                  "text": "Mitose"
+                },
+                {
+                  "correta": "nao",
+                  "text": "Fecundação"
+                }
+              ]
+            }
+          },
+          {
+            "enunciado": "O que é a clorofila?",
+            "pontuação": "3 pontos",
+            "alternativas": {
+              "alternativa": [
+                {
+                  "correta": "sim",
+                  "text": "É o pigmento responsável pela absorção da luz durante a fotossíntese."
+                },
+                {
+                  "correta": "nao",
+                  "text": "É uma enzima envolvida na respiração celular."
+                },
+                {
+                  "correta": "nao",
+                  "text": "É um tipo de célula encontrada em plantas e animais."
+                },
+                {
+                  "correta": "nao",
+                  "text": "É uma proteína presente no plasma sanguíneo."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+  
