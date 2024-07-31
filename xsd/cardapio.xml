@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cardapio xmlns="http://cardapio.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://cardapio.org 
+                                cardapio.xsd">
+    <prato id="1">
+        <nome>Ravioli de Ricota e Espinafre</nome>
+        <descricao>Ravioli recheado com ricota e espinafre servido com molho de manteiga e sálvia.</descricao>
+        <ingredientes>
+            <ingrediente>Ravioli de ricota e espinafre</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+            <ingrediente>Sálvia</ingrediente>
+            <ingrediente>Queijo parmesão</ingrediente>
+            <ingrediente>Noz-moscada</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta-do-reino</ingrediente>
+        </ingredientes>
+        <preco>28.00</preco>
+        <calorias>550</calorias>
+        <tempoPreparo>25 minutos</tempoPreparo>
+    </prato>
+    <prato id="2">
+        <nome>Wrap de Frango com Abacate</nome>
+        <descricao>Wrap recheado com frango grelhado, abacate, tomate e molho de iogurte.</descricao>
+        <ingredientes>
+            <ingrediente>Tortilla de trigo</ingrediente>
+            <ingrediente>Frango grelhado</ingrediente>
+            <ingrediente>Abacate</ingrediente>
+            <ingrediente>Tomate</ingrediente>
+            <ingrediente>Molho de iogurte</ingrediente>
+            <ingrediente>Folhas de alface</ingrediente>
+            <ingrediente>Limão</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta-do-reino</ingrediente>
+        </ingredientes>
+        <preco>20.00</preco>
+        <calorias>400</calorias>
+        <tempoPreparo>20 minutos</tempoPreparo>
+    </prato>
+</cardapio>
