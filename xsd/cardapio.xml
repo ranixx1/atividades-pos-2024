@@ -36,4 +36,51 @@
         <calorias>400</calorias>
         <tempoPreparo>20 minutos</tempoPreparo>
     </prato>
+    <prato id="3">
+        <nome>Sopa de Abóbora</nome>
+        <descricao>Sopa cremosa de abóbora com gengibre e creme de leite.</descricao>
+        <ingredientes>
+            <ingrediente>Abóbora</ingrediente>
+            <ingrediente>Gengibre</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+            <ingrediente>Alho</ingrediente>
+            <ingrediente>Caldo de legumes</ingrediente>
+            <ingrediente>Creme de leite</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta-do-reino</ingrediente>
+        </ingredientes>
+        <preco>15.00</preco>
+        <calorias>200</calorias>
+        <tempoPreparo>30 minutos</tempoPreparo>
+    </prato>
+    <prato id="4">
+        <nome>Pizza Margherita</nome>
+        <descricao>Pizza clássica com molho de tomate, mussarela de búfala, manjericão e azeite.</descricao>
+        <ingredientes>
+            <ingrediente>Massa de pizza</ingrediente>
+            <ingrediente>Molho de tomate</ingrediente>
+            <ingrediente>Mussarela de búfala</ingrediente>
+            <ingrediente>Manjericão</ingrediente>
+            <ingrediente>Azeite</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta-do-reino</ingrediente>
+        </ingredientes>
+        <preco>30.00</preco>
+        <calorias>800</calorias>
+        <tempoPreparo>20 minutos</tempoPreparo>
+    </prato>
+    <prato id="5">
+        <nome>Sorvete de Chocolate</nome>
+        <descricao>Sorvete cremoso de chocolate com pedaços de chocolate.</descricao>
+        <ingredientes>
+            <ingrediente>Leite</ingrediente>
+            <ingrediente>Creme de leite</ingrediente>
+            <ingrediente>Açúcar</ingrediente>
+            <ingrediente>Chocolate</ingrediente>
+            <ingrediente>Extrato de baunilha</ingrediente>
+        </ingredientes>
+        <preco>12.00</preco>
+        <calorias>300</calorias>
+        <tempoPreparo>15 minutos</tempoPreparo>
+    </prato>
 </cardapio>
