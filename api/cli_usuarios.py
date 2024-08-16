@@ -1,160 +1,97 @@
-import json
-import os
+import requests
 
-# Função para carregar os dados dos usuários do arquivo JSON
-def carregar_dados():
-    if os.path.exists('usuarios.json'):
-        with open('usuarios.json', 'r') as file:
-            return json.load(file)
-    else:
-        return []
+def exibir_menu():
+    print(10 * '=' + ' MENU ' + 10 * '=')
+    print('1 - Listar todos os usuários.')
+    print('2 - Listar tarefas de um usuário específico.')
+    print('3 - Operações CRUD em um usuário.')
+    print(40 * '=')
 
-# Função para salvar os dados dos usuários no arquivo JSON
-def salvar_dados(usuarios):
-    with open('usuarios.json', 'w') as file:
-        json.dump(usuarios, file, indent=4)
-
-# Função para listar todos os usuários
 def listar_usuarios():
-    usuarios = carregar_dados()
-    if usuarios:
-        for usuario in usuarios:
-            print(f"ID: {usuario['id']}, Nome: {usuario['name']}, Email: {usuario['email']}")
-    else:
-        print("Nenhum usuário encontrado.")
-    print("")
+    print(10 * '=' + ' Lista de Usuários ' + 10 * '=')
+    response = requests.get('https://jsonplaceholder.typicode.com/users')
+    usuarios = response.json()
+    for usuario in usuarios:
+        print(f"{usuario['id']} - {usuario['username']}")
 
-# Função para listar as tarefas de um usuário específico
 def listar_tarefas_usuario():
-    usuarios = carregar_dados()
-    usuario_id = int(input("Digite o ID do usuário: "))
-    usuario = next((u for u in usuarios if u['id'] == usuario_id), None)
-    if usuario:
-        if 'todos' in usuario:
-            print("Tarefas do usuário:")
-            for tarefa in usuario['todos']:
-                print(f"- {tarefa['title']}")
-        else:
-            print("O usuário não possui tarefas.")
-    else:
-        print("Usuário não encontrado.")
-    print("")
+    usuario_id = int(input('Digite o ID do usuário: '))
+    print(10 * '=' + f' Tarefas do Usuário {usuario_id} ' + 10 * '=')
+    response = requests.get(f'https://jsonplaceholder.typicode.com/users/{usuario_id}/todos')
+    tarefas = response.json()
+    for tarefa in tarefas:
+        print(f"Tarefa: {tarefa['title']}")
 
-# Função para criar um novo usuário
+def crud_usuario():
+    print(10 * '=' + ' CRUD de Usuário ' + 10 * '=')
+    print('1 - Criar Usuário')
+    print('2 - Ler Usuário')
+    print('3 - Atualizar Usuário')
+    print('4 - Deletar Usuário')
+    opcao_crud = int(input('Escolha uma opção: '))
+
+    if opcao_crud == 1:
+        criar_usuario()
+    elif opcao_crud == 2:
+        ler_usuario()
+    elif opcao_crud == 3:
+        atualizar_usuario()
+    elif opcao_crud == 4:
+        deletar_usuario()
+
 def criar_usuario():
-    usuarios = carregar_dados()
-    novo_id = max([u['id'] for u in usuarios] + [0]) + 1
-    nome = input("Digite o nome: ")
-    username = input("Digite o username: ")
-    email = input("Digite o email: ")
-    telefone = input("Digite o telefone: ")
-
+    username = input('Digite o username: ')
     novo_usuario = {
-        "id": novo_id,
-        "name": nome,
+        "name": username,
         "username": username,
-        "email": email,
-        "phone": telefone,
+        "email": "exemplo@exemplo.com",
         "address": {
-            "street": "",
-            "suite": "",
-            "city": "",
-            "zipcode": "",
-            "geo": {
-                "lat": "",
-                "lng": ""
-            }
+            "street": "Rua Exemplo",
+            "suite": "Apt. 101",
+            "city": "Cidade Exemplo",
+            "zipcode": "00000-000"
         },
-        "website": "",
+        "phone": "0000-0000",
+        "website": "exemplo.com",
         "company": {
-            "name": "",
-            "catchPhrase": "",
-            "bs": ""
-        },
-        "todos": []  # Lista de tarefas do usuário
+            "name": "Empresa Exemplo",
+            "catchPhrase": "Frase de impacto",
+            "bs": "slogan"
+        }
     }
+    response = requests.post('https://jsonplaceholder.typicode.com/users', json=novo_usuario)
+    print(f"Usuário criado com sucesso! Status: {response.status_code}")
+    print(f"Dados do Usuário: {response.json()}")
 
-    usuarios.append(novo_usuario)
-    salvar_dados(usuarios)
-    print("Usuário criado com sucesso!\n")
-
-# Função para ler dados de um usuário específico
 def ler_usuario():
-    usuarios = carregar_dados()
-    usuario_id = int(input("Digite o ID do usuário: "))
-    usuario = next((u for u in usuarios if u['id'] == usuario_id), None)
-    if usuario:
-        print(json.dumps(usuario, indent=4))
-    else:
-        print("Usuário não encontrado.")
-    print("")
+    usuario_id = int(input('Digite o ID do usuário: '))
+    response = requests.get(f'https://jsonplaceholder.typicode.com/users/{usuario_id}')
+    print(f"Dados do Usuário {usuario_id}: {response.json()}")
 
-# Função para atualizar dados de um usuário específico
 def atualizar_usuario():
-    usuarios = carregar_dados()
-    usuario_id = int(input("Digite o ID do usuário: "))
-    usuario = next((u for u in usuarios if u['id'] == usuario_id), None)
-    if usuario:
-        nome = input(f"Digite o novo nome ({usuario['name']}): ")
-        username = input(f"Digite o novo username ({usuario['username']}): ")
-        email = input(f"Digite o novo email ({usuario['email']}): ")
-        telefone = input(f"Digite o novo telefone ({usuario['phone']}): ")
+    usuario_id = int(input('Digite o ID do usuário: '))
+    novo_username = input('Digite o novo username: ')
+    dados_atualizados = {"username": novo_username}
+    response = requests.patch(f'https://jsonplaceholder.typicode.com/users/{usuario_id}', json=dados_atualizados)
+    print(f"Usuário atualizado: {response.json()}")
 
-        if nome: usuario['name'] = nome
-        if username: usuario['username'] = username
-        if email: usuario['email'] = email
-        if telefone: usuario['phone'] = telefone
-
-        salvar_dados(usuarios)
-        print("Usuário atualizado com sucesso!\n")
-    else:
-        print("Usuário não encontrado.")
-    print("")
-
-# Função para deletar um usuário específico
 def deletar_usuario():
-    usuarios = carregar_dados()
-    usuario_id = int(input("Digite o ID do usuário: "))
-    usuario = next((u for u in usuarios if u['id'] == usuario_id), None)
-    if usuario:
-        usuarios = [u for u in usuarios if u['id'] != usuario_id]
-        salvar_dados(usuarios)
-        print("Usuário deletado com sucesso!\n")
+    usuario_id = int(input('Digite o ID do usuário: '))
+    response = requests.delete(f'https://jsonplaceholder.typicode.com/users/{usuario_id}')
+    print(f"Usuário deletado! Status: {response.status_code}")
+
+def main():
+    exibir_menu()
+    opcao = int(input('Escolha uma opção: '))
+
+    if opcao == 1:
+        listar_usuarios()
+    elif opcao == 2:
+        listar_tarefas_usuario()
+    elif opcao == 3:
+        crud_usuario()
     else:
-        print("Usuário não encontrado.")
-    print("")
+        print("Opção inválida. Tente novamente.")
 
-# Função para o menu principal da CLI
-def menu():
-    while True:
-        print("Escolha uma opção:")
-        print("1. Listar todos usuários")
-        print("2. Listar as tarefas de um usuário específico")
-        print("3. Criar um novo usuário")
-        print("4. Ler dados de um usuário específico")
-        print("5. Atualizar um usuário")
-        print("6. Deletar um usuário")
-        print("7. Sair")
-        
-        opcao = input("Digite o número da opção: ")
-        
-        if opcao == '1':
-            listar_usuarios()
-        elif opcao == '2':
-            listar_tarefas_usuario()
-        elif opcao == '3':
-            criar_usuario()
-        elif opcao == '4':
-            ler_usuario()
-        elif opcao == '5':
-            atualizar_usuario()
-        elif opcao == '6':
-            deletar_usuario()
-        elif opcao == '7':
-            print("Saindo...")
-            break
-        else:
-            print("Opção inválida. Tente novamente.\n")
-
-if __name__ == "__main__":
-    menu()
+if __name__ == '__main__':
+    main()
