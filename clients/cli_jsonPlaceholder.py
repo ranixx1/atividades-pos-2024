@@ -22,10 +22,10 @@ if escolha == 1:
 
 elif escolha == 2:
     print('')
-    user_especifico = int(input('Digite o id do usuário: '))
+    user_esp = int(input('Digite o id do usuário: '))
     print('')
     print(5*'=-' + ' Tarefas do usuário ' + '-='*5)
-    user_todo_url = f'https://jsonplaceholder.typicode.com/users/{user_especifico}/todos'
+    user_todo_url = f'https://jsonplaceholder.typicode.com/users/{user_esp}/todos'
     response = requests.get(user_todo_url).json()
     for user_post in response:
         print(f"Tarefa: {user_post['title']}")
@@ -75,10 +75,10 @@ elif escolha == 3:
         print('')
         
     elif crud == 2:
-        user_especifico = int(input('Digite o id do usuário: '))
-        user_url = f'https://jsonplaceholder.typicode.com/users/{user_especifico}'
+        user_esp = int(input('Digite o id do usuário: '))
+        user_url = f'https://jsonplaceholder.typicode.com/users/{user_esp}'
         response = requests.get(user_url).json()
-        print(f"User {user_especifico} = {response}")
+        print(f"User {user_esp} = {response}")
         print('')
 
     elif crud == 3:
