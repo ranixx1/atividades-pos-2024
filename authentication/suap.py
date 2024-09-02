@@ -1,53 +1,32 @@
-import requests
-import getpass import getpass
-import json
+import requests, os, json
+from getpass import getpass
 
+api_url = "https://suap.ifrn.edu.br/api/"
 
+def auth(api_url):
+    user = input("Matrícula: ")
+    password = getpass("Senha: ")
 
-api_utl = "https://suap.ifrn.edu.br/api"
+    data = {"username":user,"password":password}
 
-def autenticar(api_url):
-    user = input ("user:")
-    password = getpass()
+    response = requests.post(api_url+"v2/autenticacao/token/", json=data)
+    return response.json()["access"]
 
-    data= {"username": user , "password": password}
-    response = requests.post(api_url+"v2/autenticacao/token",json=data)
-    return
+def boletim_request(api_url, token, ano_letivo):
+    headers = {
+        "Authorization": f'Bearer {token}'
+    }
+    response = requests.get(f"{api_url}v2/minhas-informacoes/boletim/{ano_letivo}/1", headers=headers)
+    return response.json()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    def main():
-        api_url = "https://suap.ifrn.edu.br/api"
-
-
-        with open('suap_keys.json', 'w+') as file:
-            try:
-                data=json.load(file)
-            except json.decoder.JSONDecodeError:
-                data = {}
-                data['token'] = autenticar(api_url)
-                json.dump(data,file)
-token = data['token']
-headers = {
-    'Autorizatio':f'Bearer {token}'
-
-}
+if (os.path.isfile("auth/suap_api/token.json")):
+    with open("auth/suap_api/token.json") as file:
+        token = json.load(file)['token']
+        response = boletim_request(api_url, token, 2023)
+        for disciplina in response:
+            print(f"{disciplina['disciplina']} - Média final: {disciplina['media_disciplina']}")  
+else:
+    with open("auth/suap_api/token.json", "w") as file:
+        token = auth(api_url)
+        data = {"token": token}
+        json.dump(data, file)
